@@ -1,4 +1,4 @@
-# TIme Zoney
+# Time Zoney
 Find a common meeting time between participants globally!
 
 ## How to Use
