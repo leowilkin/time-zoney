@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Zoney</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Time Zoney</h1>
+        <form id="timezone-form">
+            <div>
+                <label for="timezone1">Your Time Zone</label>
+                <input list="timezones" id="timezone1" placeholder="Search and select time zone">
+                <datalist id="timezones">
+                </datalist>
+            </div>
+            <div>
+                <label for="timezone2">Your Guest's Time Zone</label>
+                <input list="timezones" id="timezone2" placeholder="Search and select time zone">
+            </div>
+            <button type="button" onclick="showMeetingTimes()">Show Meeting Times</button>
+        </form>
+        <div id="no-times-message" class="hidden">
+            No times found between 10AM and 5PM for both time zones.
+            <button type="button" onclick="showAllTimes()">Show all</button>
+        </div>
+        <div id="no-exact-match-message" class="hidden">
+            We couldn't find an exact time 10AM to 4PM, but here are some times which might work.
+        </div>
+        <div id="results" class="results hidden">
+            <table id="times-table">
+                <thead>
+                    <tr>
+                        <th id="timezone1-header"></th>
+                        <th id="timezone2-header"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script async defer src="https://tacocat.wilkin.xyz/hello.js"></script>
+</body>
+</html>
